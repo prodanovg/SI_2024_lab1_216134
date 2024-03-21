@@ -1,0 +1,333 @@
+Gorge@DESKTOP-T8404J2 MINGW64 ~ (master)
+$ mkdir SI_2024_lab1_216134
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~ (master)
+$ cd SI_2024_lab1_216134/
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ ls
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Gorge/SI_2024_lab1_216134/.git/
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git remote add origin git@github.com:prodanovg/SI_2024_lab1_216134.git
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ ls l
+ls: cannot access 'l': No such file or directory
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ ls
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ nano README.md
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 9144f6a] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git add --all
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git commit -m "Add starter code"
+[master 535968c] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.10 KiB | 1.10 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:prodanovg/SI_2024_lab1_216134.git
+ * [new branch]      master -> master
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git branch bug1
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git branch bug2
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ nano SILab1_1.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 882db68] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ nano SILab1_2.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 5b2fed3] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git log
+commit 882db684c4364e8b88aa2515191a4e234435042b (HEAD -> bug1)
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:02:15 2024 +0100
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit 535968c0f5ba14bf5e80bcd9b9dee6f67532bf50 (origin/master, master)
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:01:14 2024 +0100
+
+    Add starter code
+
+commit 9144f6aee053c500047166fed0b80ed3f7998f48
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:00:27 2024 +0100
+
+    Initial commit
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git log
+commit 5b2fed3762c566bfe92b0ffa1d9436132b031a86 (HEAD -> bug2)
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:02:55 2024 +0100
+
+    Fix wrong condition in makeBigStringFrom
+
+commit 535968c0f5ba14bf5e80bcd9b9dee6f67532bf50 (origin/master, master)
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:01:14 2024 +0100
+
+    Add starter code
+
+commit 9144f6aee053c500047166fed0b80ed3f7998f48
+Author: prodanovg <gjorge.prodanov@students.finki.ukim.mk>
+Date:   Thu Mar 21 19:00:27 2024 +0100
+
+    Initial commit
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ nano SILab1Main.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 abd4ff3] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ nano SILab1Main.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git add SILab1Main.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 e06d909] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git push origin bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 750 bytes | 750.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/prodanovg/SI_2024_lab1_216134/pull/new/bug1
+remote:
+gTo github.com:prodanovg/SI_2024_lab1_216134.git
+ * [new branch]      bug1 -> bug1
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git push origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 692 bytes | 692.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/prodanovg/SI_2024_lab1_216134/pull/new/bug2
+remote:
+To github.com:prodanovg/SI_2024_lab1_216134.git
+ * [new branch]      bug2 -> bug2
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git push origin master
+Everything up-to-date
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git merge bug1
+Updating 535968c..abd4ff3
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push bug1
+fatal: 'bug1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin bug1
+Everything up-to-date
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:prodanovg/SI_2024_lab1_216134.git
+   535968c..abd4ff3  master -> master
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply e06d909... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply e06d909... Call method makeBigStringFrom in main class
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2|REBASE 2/2)
+$ nano SILab1Main.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2|REBASE 2/2)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD 8d3b659] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/bug2.
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (bug2)
+$ git checkout master
+Switched to branch 'master'
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git merge bug2
+Updating abd4ff3..8d3b659
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin bug2
+To github.com:prodanovg/SI_2024_lab1_216134.git
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'github.com:prodanovg/SI_2024_lab1_216134.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push --force origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 679 bytes | 679.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:prodanovg/SI_2024_lab1_216134.git
+ + e06d909...8d3b659 bug2 -> bug2 (forced update)
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:prodanovg/SI_2024_lab1_216134.git
+   abd4ff3..8d3b659  master -> master
+g
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ git push origin bug1
+Everything up-to-date
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
+$ nano logs.txt
+
+Gorge@DESKTOP-T8404J2 MINGW64 ~/SI_2024_lab1_216134 (master)
